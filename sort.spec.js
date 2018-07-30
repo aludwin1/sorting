@@ -30,7 +30,7 @@ describe('Merge Sort', function(){
     expect( mergeSort([1,1,1,1,1,1,1]) ).toEqual( [1,1,1,1,1,1,1] );
   });
   it('handles arrays in reverse order', function() {
-    expect( mergeSort([5, 4, 3, 2, 1]) ).toEqual( [1, 2, 3, 4, 5] );
+    expect( mergeSort([5, 4, 3, 2, 2, 1]) ).toEqual( [1, 2, 2, 3, 4, 5] );
   });
 });
 
