@@ -1,14 +1,10 @@
 const merge = (left, right, arr) => {
   let index = 0;
   while(index < arr.length) {
-    if(left.length && right.length) {
-      let smallest = left[0] > right[0] ? right : left;
-      arr[index] = smallest.shift();
-    } else if (left.length) {
-      arr[index] = left.shift();
-    } else {
-      arr[index] = right.shift();
-    }
+    let smallest = left[0] > right[0] ? right : left;
+    if(left.length && right.length) arr[index] = smallest.shift();
+    else if (left.length) arr[index] = left.shift();
+    else arr[index] = right.shift();
     index++;
   }
   return arr;
